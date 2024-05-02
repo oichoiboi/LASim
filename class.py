@@ -1,7 +1,7 @@
 from lookupvalues import *
 
 
-class BaseClass:
+class Job:
     def __init__(self, name):
         self.name = name
         self.mainstat = 0
@@ -16,6 +16,8 @@ class Skill:
         self.stacks = 0
         self.cooldown = 0
         self.casttime = 0
+        self.rune = None
+
         
 
 class Gear:
@@ -28,4 +30,19 @@ class Gear:
         self.df = df
         self.df.set_index(['Tier', 'Level'], inplace=True)
         self.stat = self.df.loc[(self.tier, self.honing), self.type]
+
+class Simulator:
+    def __init__(self) -> None:
+        pass
+
+class Stats:
+    def __init__(self):
+        self.mainstat
+        self.weaponpower
+        self.crit
+        self.cdmg
+        self.mcdmg
+        self.attackspeed
+        self.movementspeed 
+
 
