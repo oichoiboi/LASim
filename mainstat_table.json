@@ -1,0 +1,665 @@
+{
+   "Akkan": [
+      {
+         "Level": 0,
+         "Helmet": "21,793",
+         "Shoulders": "23,194",
+         "Chest": "17,434",
+         "Pants": "18,835",
+         "Gloves": "26,151",
+         "Weapon": "37,831"
+      },
+      {
+         "Level": 1,
+         "Helmet": "22,279",
+         "Shoulders": "23,711",
+         "Chest": "17,823",
+         "Pants": "19,255",
+         "Gloves": "26,735",
+         "Weapon": "38,673"
+      },
+      {
+         "Level": 2,
+         "Helmet": "22,776",
+         "Shoulders": "24,240",
+         "Chest": "18,221",
+         "Pants": "19,685",
+         "Gloves": "27,331",
+         "Weapon": "39,534"
+      },
+      {
+         "Level": 3,
+         "Helmet": "23,284",
+         "Shoulders": "24,781",
+         "Chest": "18,627",
+         "Pants": "20,124",
+         "Gloves": "27,941",
+         "Weapon": "40,413"
+      },
+      {
+         "Level": 4,
+         "Helmet": "23,803",
+         "Shoulders": "25,334",
+         "Chest": "19,043",
+         "Pants": "20,573",
+         "Gloves": "28,564",
+         "Weapon": "41,313"
+      },
+      {
+         "Level": 5,
+         "Helmet": "24,334",
+         "Shoulders": "25,899",
+         "Chest": "19,468",
+         "Pants": "21,032",
+         "Gloves": "29,201",
+         "Weapon": "42,232"
+      },
+      {
+         "Level": 6,
+         "Helmet": "24,877",
+         "Shoulders": "26,476",
+         "Chest": "19,902",
+         "Pants": "21,501",
+         "Gloves": "29,852",
+         "Weapon": "43,172"
+      },
+      {
+         "Level": 7,
+         "Helmet": "25,432",
+         "Shoulders": "27,067",
+         "Chest": "20,346",
+         "Pants": "21,981",
+         "Gloves": "30,518",
+         "Weapon": "44,132"
+      },
+      {
+         "Level": 8,
+         "Helmet": "25,999",
+         "Shoulders": "27,671",
+         "Chest": "20,799",
+         "Pants": "22,471",
+         "Gloves": "31,199",
+         "Weapon": "45,114"
+      },
+      {
+         "Level": 9,
+         "Helmet": "26,579",
+         "Shoulders": "28,288",
+         "Chest": "21,263",
+         "Pants": "22,972",
+         "Gloves": "31,895",
+         "Weapon": "46,118"
+      },
+      {
+         "Level": 10,
+         "Helmet": "27,172",
+         "Shoulders": "28,918",
+         "Chest": "21,737",
+         "Pants": "23,484",
+         "Gloves": "32,606",
+         "Weapon": "47,145"
+      },
+      {
+         "Level": 11,
+         "Helmet": "27,778",
+         "Shoulders": "29,563",
+         "Chest": "22,222",
+         "Pants": "24,008",
+         "Gloves": "33,333",
+         "Weapon": "48,194"
+      },
+      {
+         "Level": 12,
+         "Helmet": "28,397",
+         "Shoulders": "30,222",
+         "Chest": "22,718",
+         "Pants": "24,543",
+         "Gloves": "34,076",
+         "Weapon": "49,266"
+      },
+      {
+         "Level": 13,
+         "Helmet": "29,030",
+         "Shoulders": "30,896",
+         "Chest": "23,224",
+         "Pants": "25,090",
+         "Gloves": "34,836",
+         "Weapon": "50,362"
+      },
+      {
+         "Level": 14,
+         "Helmet": "30,005",
+         "Shoulders": "31,934",
+         "Chest": "24,004",
+         "Pants": "25,933",
+         "Gloves": "36,006",
+         "Weapon": "52,051"
+      },
+      {
+         "Level": 15,
+         "Helmet": "31,013",
+         "Shoulders": "33,007",
+         "Chest": "24,811",
+         "Pants": "26,804",
+         "Gloves": "37,216",
+         "Weapon": "53,796"
+      },
+      {
+         "Level": 16,
+         "Helmet": "32,055",
+         "Shoulders": "34,115",
+         "Chest": "25,644",
+         "Pants": "27,705",
+         "Gloves": "38,466",
+         "Weapon": "55,599"
+      },
+      {
+         "Level": 17,
+         "Helmet": "33,131",
+         "Shoulders": "35,261",
+         "Chest": "26,505",
+         "Pants": "28,635",
+         "Gloves": "39,758",
+         "Weapon": "57,463"
+      },
+      {
+         "Level": 18,
+         "Helmet": "34,244",
+         "Shoulders": "36,445",
+         "Chest": "27,395",
+         "Pants": "29,597",
+         "Gloves": "41,093",
+         "Weapon": "59,390"
+      },
+      {
+         "Level": 19,
+         "Helmet": "35,394",
+         "Shoulders": "37,669",
+         "Chest": "28,315",
+         "Pants": "30,591",
+         "Gloves": "42,473",
+         "Weapon": "61,381"
+      },
+      {
+         "Level": 20,
+         "Helmet": "36,583",
+         "Shoulders": "38,934",
+         "Chest": "29,266",
+         "Pants": "31,618",
+         "Gloves": "43,899",
+         "Weapon": "63,439"
+      },
+      {
+         "Level": 21,
+         "Helmet": "37,811",
+         "Shoulders": "40,242",
+         "Chest": "30,249",
+         "Pants": "32,680",
+         "Gloves": "45,373",
+         "Weapon": "65,566"
+      },
+      {
+         "Level": 22,
+         "Helmet": "39,081",
+         "Shoulders": "41,593",
+         "Chest": "31,265",
+         "Pants": "33,777",
+         "Gloves": "46,897",
+         "Weapon": "67,764"
+      },
+      {
+         "Level": 23,
+         "Helmet": "40,393",
+         "Shoulders": "42,989",
+         "Chest": "32,314",
+         "Pants": "34,911",
+         "Gloves": "48,471",
+         "Weapon": "70,036"
+      },
+      {
+         "Level": 24,
+         "Helmet": "41,749",
+         "Shoulders": "44,433",
+         "Chest": "33,399",
+         "Pants": "36,083",
+         "Gloves": "50,098",
+         "Weapon": "72,384"
+      },
+      {
+         "Level": 25,
+         "Helmet": "43,150",
+         "Shoulders": "45,924",
+         "Chest": "34,520",
+         "Pants": "37,294",
+         "Gloves": "51,780",
+         "Weapon": "74,811"
+      }
+   ],
+   "Brelshaza": [
+      {
+         "Level": 0,
+         "Helmet": "11,267",
+         "Shoulders": "11,991",
+         "Chest": "9,014",
+         "Pants": "9,738",
+         "Gloves": "13,520",
+         "Weapon": "19,607"
+      },
+      {
+         "Level": 1,
+         "Helmet": "11,495",
+         "Shoulders": "12,234",
+         "Chest": "9,196",
+         "Pants": "9,935",
+         "Gloves": "13,793",
+         "Weapon": "20,001"
+      },
+      {
+         "Level": 2,
+         "Helmet": "11,727",
+         "Shoulders": "12,481",
+         "Chest": "9,382",
+         "Pants": "10,135",
+         "Gloves": "14,072",
+         "Weapon": "20,403"
+      },
+      {
+         "Level": 3,
+         "Helmet": "12,191",
+         "Shoulders": "12,975",
+         "Chest": "9,753",
+         "Pants": "10,537",
+         "Gloves": "14,630",
+         "Weapon": "21,207"
+      },
+      {
+         "Level": 4,
+         "Helmet": "12,916",
+         "Shoulders": "13,746",
+         "Chest": "10,333",
+         "Pants": "11,163",
+         "Gloves": "15,499",
+         "Weapon": "22,461"
+      },
+      {
+         "Level": 5,
+         "Helmet": "13,683",
+         "Shoulders": "14,562",
+         "Chest": "10,946",
+         "Pants": "11,826",
+         "Gloves": "16,419",
+         "Weapon": "23,790"
+      },
+      {
+         "Level": 6,
+         "Helmet": "14,495",
+         "Shoulders": "15,427",
+         "Chest": "11,596",
+         "Pants": "12,528",
+         "Gloves": "17,394",
+         "Weapon": "25,196"
+      },
+      {
+         "Level": 7,
+         "Helmet": "15,356",
+         "Shoulders": "16,343",
+         "Chest": "12,285",
+         "Pants": "13,272",
+         "Gloves": "18,427",
+         "Weapon": "26,686"
+      },
+      {
+         "Level": 8,
+         "Helmet": "16,267",
+         "Shoulders": "17,313",
+         "Chest": "13,014",
+         "Pants": "14,060",
+         "Gloves": "19,521",
+         "Weapon": "28,264"
+      },
+      {
+         "Level": 9,
+         "Helmet": "17,867",
+         "Shoulders": "19,015",
+         "Chest": "14,293",
+         "Pants": "15,442",
+         "Gloves": "21,440",
+         "Weapon": "31,033"
+      },
+      {
+         "Level": 10,
+         "Helmet": "18,673",
+         "Shoulders": "19,873",
+         "Chest": "14,939",
+         "Pants": "16,139",
+         "Gloves": "22,408",
+         "Weapon": "32,430"
+      },
+      {
+         "Level": 11,
+         "Helmet": "19,516",
+         "Shoulders": "20,771",
+         "Chest": "15,613",
+         "Pants": "16,867",
+         "Gloves": "23,419",
+         "Weapon": "33,889"
+      },
+      {
+         "Level": 12,
+         "Helmet": "20,397",
+         "Shoulders": "21,708",
+         "Chest": "16,317",
+         "Pants": "17,629",
+         "Gloves": "24,476",
+         "Weapon": "35,414"
+      },
+      {
+         "Level": 13,
+         "Helmet": "21,317",
+         "Shoulders": "22,687",
+         "Chest": "17,054",
+         "Pants": "18,424",
+         "Gloves": "25,580",
+         "Weapon": "37,008"
+      },
+      {
+         "Level": 14,
+         "Helmet": "22,279",
+         "Shoulders": "23,711",
+         "Chest": "17,823",
+         "Pants": "19,255",
+         "Gloves": "26,735",
+         "Weapon": "38,673"
+      },
+      {
+         "Level": 15,
+         "Helmet": "23,284",
+         "Shoulders": "24,781",
+         "Chest": "18,627",
+         "Pants": "20,124",
+         "Gloves": "27,941",
+         "Weapon": "40,413"
+      },
+      {
+         "Level": 16,
+         "Helmet": "24,334",
+         "Shoulders": "25,899",
+         "Chest": "19,468",
+         "Pants": "21,032",
+         "Gloves": "29,201",
+         "Weapon": "42,232"
+      },
+      {
+         "Level": 17,
+         "Helmet": "25,432",
+         "Shoulders": "27,067",
+         "Chest": "20,346",
+         "Pants": "21,981",
+         "Gloves": "30,518",
+         "Weapon": "44,132"
+      },
+      {
+         "Level": 18,
+         "Helmet": "26,579",
+         "Shoulders": "28,288",
+         "Chest": "21,263",
+         "Pants": "22,972",
+         "Gloves": "31,895",
+         "Weapon": "46,118"
+      },
+      {
+         "Level": 19,
+         "Helmet": "27,778",
+         "Shoulders": "29,563",
+         "Chest": "22,222",
+         "Pants": "24,008",
+         "Gloves": "33,333",
+         "Weapon": "48,194"
+      },
+      {
+         "Level": 20,
+         "Helmet": "29,030",
+         "Shoulders": "30,896",
+         "Chest": "23,224",
+         "Pants": "25,090",
+         "Gloves": "34,836",
+         "Weapon": "50,362"
+      },
+      {
+         "Level": 21,
+         "Helmet": "30,005",
+         "Shoulders": "31,934",
+         "Chest": "24,004",
+         "Pants": "25,933",
+         "Gloves": "36,006",
+         "Weapon": "52,051"
+      },
+      {
+         "Level": 22,
+         "Helmet": "31,013",
+         "Shoulders": "33,007",
+         "Chest": "24,811",
+         "Pants": "26,804",
+         "Gloves": "37,216",
+         "Weapon": "53,796"
+      },
+      {
+         "Level": 23,
+         "Helmet": "32,055",
+         "Shoulders": "34,115",
+         "Chest": "25,644",
+         "Pants": "27,705",
+         "Gloves": "38,466",
+         "Weapon": "55,599"
+      },
+      {
+         "Level": 24,
+         "Helmet": "33,131",
+         "Shoulders": "35,261",
+         "Chest": "26,505",
+         "Pants": "28,635",
+         "Gloves": "39,758",
+         "Weapon": "57,463"
+      },
+      {
+         "Level": 25,
+         "Helmet": "34,244",
+         "Shoulders": "36,445",
+         "Chest": "27,395",
+         "Pants": "29,597",
+         "Gloves": "41,093",
+         "Weapon": "59,390"
+      }
+   ],
+   "Relic": [
+      {
+         "Level": 0,
+         "Helmet": "7,905",
+         "Shoulders": "8,513",
+         "Chest": "6,081",
+         "Pants": "6,689",
+         "Gloves": "9,730",
+         "Weapon": "14,692"
+      },
+      {
+         "Level": 1,
+         "Helmet": "8,311",
+         "Shoulders": "8,951",
+         "Chest": "6,393",
+         "Pants": "7,033",
+         "Gloves": "10,229",
+         "Weapon": "15,442"
+      },
+      {
+         "Level": 2,
+         "Helmet": "8,651",
+         "Shoulders": "9,316",
+         "Chest": "6,655",
+         "Pants": "7,320",
+         "Gloves": "10,647",
+         "Weapon": "16,069"
+      },
+      {
+         "Level": 3,
+         "Helmet": "8,915",
+         "Shoulders": "9,600",
+         "Chest": "6,858",
+         "Pants": "7,543",
+         "Gloves": "10,972",
+         "Weapon": "16,556"
+      },
+      {
+         "Level": 4,
+         "Helmet": "9,186",
+         "Shoulders": "9,893",
+         "Chest": "7,067",
+         "Pants": "7,773",
+         "Gloves": "11,306",
+         "Weapon": "17,057"
+      },
+      {
+         "Level": 5,
+         "Helmet": "9,466",
+         "Shoulders": "10,194",
+         "Chest": "7,282",
+         "Pants": "8,010",
+         "Gloves": "11,651",
+         "Weapon": "17,574"
+      },
+      {
+         "Level": 6,
+         "Helmet": "9,755",
+         "Shoulders": "10,505",
+         "Chest": "7,504",
+         "Pants": "8,254",
+         "Gloves": "12,006",
+         "Weapon": "18,107"
+      },
+      {
+         "Level": 7,
+         "Helmet": "10,052",
+         "Shoulders": "10,825",
+         "Chest": "7,732",
+         "Pants": "8,506",
+         "Gloves": "12,372",
+         "Weapon": "18,655"
+      },
+      {
+         "Level": 8,
+         "Helmet": "10,358",
+         "Shoulders": "11,155",
+         "Chest": "7,968",
+         "Pants": "8,765",
+         "Gloves": "12,748",
+         "Weapon": "19,220"
+      },
+      {
+         "Level": 9,
+         "Helmet": "10,674",
+         "Shoulders": "11,495",
+         "Chest": "8,211",
+         "Pants": "9,032",
+         "Gloves": "13,137",
+         "Weapon": "19,803"
+      },
+      {
+         "Level": 10,
+         "Helmet": "10,999",
+         "Shoulders": "11,845",
+         "Chest": "8,461",
+         "Pants": "9,307",
+         "Gloves": "13,537",
+         "Weapon": "20,403"
+      },
+      {
+         "Level": 11,
+         "Helmet": "11,993",
+         "Shoulders": "12,916",
+         "Chest": "9,226",
+         "Pants": "10,148",
+         "Gloves": "14,761",
+         "Weapon": "22,239"
+      },
+      {
+         "Level": 12,
+         "Helmet": "13,077",
+         "Shoulders": "14,083",
+         "Chest": "10,060",
+         "Pants": "11,066",
+         "Gloves": "16,095",
+         "Weapon": "24,241"
+      },
+      {
+         "Level": 13,
+         "Helmet": "14,259",
+         "Shoulders": "15,356",
+         "Chest": "10,969",
+         "Pants": "12,065",
+         "Gloves": "17,549",
+         "Weapon": "26,422"
+      },
+      {
+         "Level": 14,
+         "Helmet": "15,547",
+         "Shoulders": "16,743",
+         "Chest": "11,959",
+         "Pants": "13,155",
+         "Gloves": "19,135",
+         "Weapon": "28,800"
+      },
+      {
+         "Level": 15,
+         "Helmet": "17,339",
+         "Shoulders": "18,673",
+         "Chest": "13,338",
+         "Pants": "14,672",
+         "Gloves": "21,341",
+         "Weapon": "32,109"
+      },
+      {
+         "Level": 16,
+         "Helmet": "18,526",
+         "Shoulders": "19,951",
+         "Chest": "14,251",
+         "Pants": "15,676",
+         "Gloves": "22,802",
+         "Weapon": "34,300"
+      },
+      {
+         "Level": 17,
+         "Helmet": "19,795",
+         "Shoulders": "21,317",
+         "Chest": "15,227",
+         "Pants": "16,749",
+         "Gloves": "24,362",
+         "Weapon": "36,641"
+      },
+      {
+         "Level": 18,
+         "Helmet": "21,149",
+         "Shoulders": "22,776",
+         "Chest": "16,269",
+         "Pants": "17,896",
+         "Gloves": "26,030",
+         "Weapon": "39,142"
+      },
+      {
+         "Level": 19,
+         "Helmet": "22,596",
+         "Shoulders": "24,334",
+         "Chest": "17,382",
+         "Pants": "19,120",
+         "Gloves": "27,811",
+         "Weapon": "41,814"
+      },
+      {
+         "Level": 20,
+         "Helmet": "25,231",
+         "Shoulders": "27,172",
+         "Chest": "19,408",
+         "Pants": "21,349",
+         "Gloves": "31,053",
+         "Weapon": "46,678"
+      }
+   ]
+}
