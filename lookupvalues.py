@@ -1,5 +1,3 @@
-import sqlite3
-import csv
 import pandas as pd
 import json
 
@@ -21,14 +19,8 @@ def get_gear_value(data, tier, level, piece):
     item = next((item for item in tier_data if item['Level'] == level and piece in item), None)
     return item[piece] if item else 0
 
-print(get_gear_value(gear_stats, 'Akkan', 26, 'Weapon'))
 
-HELMET = 'Helmet'
-SHOULDERS = 'Shoulders'
-CHEST = 'Chest'
-PANTS = 'Pants'
-GLOVES = 'Gloves'
-WEAPON = 'Weapon'
+
 
 
 
