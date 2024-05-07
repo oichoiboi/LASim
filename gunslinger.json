@@ -7,22 +7,22 @@
         "tripods": [
         {
             "name": "Quick Aim",
-            "lvl": 4,
+            "req_lvl": 4,
             "Atkspeed": 0.1
         },
         {
             "name": "Double Tap",
-            "lvl": 7,
+            "req_lvl": 7,
             "Mult": 1.64
         },
         {
             "name": "Final Strike",
-            "lvl": 10,
+            "req_lvl": 10,
             "Mult": 2.8
         },
         {
             "name": "Quickshot",
-            "lvl": 10,
+            "req_lvl": 10,
             "Mult": 3.65
         }
         ]
@@ -35,18 +35,74 @@
         "tripods": [
         {
             "name": "Quick Aim",
-            "lvl": 4,
+            "req_lvl": 4,
             "Atkspeed": 0.1
         },
         {
             "name": "Large Magazine",
-            "lvl": 7,
+            "req_lvl": 7,
             "Mult": 1.83
         },
         {
             "name": "Steady Aim",
-            "lvl": 10,
+            "req_lvl": 10,
             "Mult": 2.2
+        }
+        ]
+    },
+    {
+        "name": "Catastrophe",
+        "skillcoeff": 21.05,
+        "frames": 79.8,
+        "basecooldown": 24,
+        "tripods": [
+        {
+            "name": "Quick Aim",
+            "req_lvl": 4,
+            "Atkspeed": 0.1
+        },
+        {
+            "name": "Cutthroat",
+            "req_lvl": 7,
+            "Mult": 1.54
+        },
+        {
+            "name": "Carpet Bombing",
+            "req_lvl": 10,
+            "Mult": 2
+        },
+        {
+            "name": "Eternal Calamity",
+            "req_lvl": 10,
+            "Mult": 2.701
+        }
+        ]
+    },
+    {
+        "name": "Perfect Shot",
+        "skillcoeff": 26.74,
+        "frames": 109.8,
+        "basecooldown": 30,
+        "tripods": [
+        {
+            "name": "Stable Stance",
+            "req_lvl": 4,
+            "Atkspeed": 0.1
+        },
+        {
+            "name": "Cutthroat",
+            "req_lvl": 7,
+            "Mult": 1.54
+        },
+        {
+            "name": "Carpet Bombing",
+            "req_lvl": 10,
+            "Mult": 2
+        },
+        {
+            "name": "Eternal Calamity",
+            "req_lvl": 10,
+            "Mult": 2.701
         }
         ]
     }
