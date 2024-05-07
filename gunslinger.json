@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Focused Shot",
+        "skillcoeff": 29.48,
+        "frames": 181.8,
+        "basecooldown": 27,
+        "tripods": [
+        {
+            "name": "Quick Aim",
+            "lvl": 4,
+            "Atkspeed": 0.1
+        },
+        {
+            "name": "Double Tap",
+            "lvl": 7,
+            "Mult": 1.64
+        },
+        {
+            "name": "Final Strike",
+            "lvl": 10,
+            "Mult": 2.8
+        },
+        {
+            "name": "Quickshot",
+            "lvl": 10,
+            "Mult": 3.65
+        }
+        ]
+    },
+    {
+        "name": "Target Down",
+        "skillcoeff": 34.1,
+        "frames": 181.8,
+        "basecooldown": 36,
+        "tripods": [
+        {
+            "name": "Quick Aim",
+            "lvl": 4,
+            "Atkspeed": 0.1
+        },
+        {
+            "name": "Large Magazine",
+            "lvl": 7,
+            "Mult": 1.83
+        },
+        {
+            "name": "Steady Aim",
+            "lvl": 10,
+            "Mult": 2.2
+        }
+        ]
+    }
+]
