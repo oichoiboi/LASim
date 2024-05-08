@@ -1,6 +1,6 @@
-from lookupvalues import *
+
 import json
-from setup import *
+from stats import *
 
 with open('mainstat_table.json', 'r') as json_file:
     gear_stats = json.load(json_file)

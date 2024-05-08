@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Focused Shot",
+        "skillCoeff": 0,
+        "direction": 1,
+        "cooldown": 27,
+        "frames": 181.8,
+        "tripods": [
+            {
+                "name": "Quick Aim",
+                "min_skill_lvl": 4,
+                "max_level": 1,
+                "stat_dict": {
+                    "Atkspeed": 0.1
+                }
+            },
+            {
+                "name": "Double Tap",
+                "min_skill_lvl": 7,
+                "max_level": 5,
+                "stat_dict": {
+                    "Mult": [0, 0, 0, 0, 1.64]
+                }
+                
+            },
+            {
+                "name": "Final Strike",
+                "min_skill_lvl": 10,
+                "max_level": 5,
+                "stat_dict": {
+                    "Mult": [0, 0, 0, 0, 2.8]
+                }
+            },
+            {
+                "name": "Quickshot",
+                "min_skill_lvl": 10,
+                "max_level": 5,
+                "stat_dict": {
+                    "Mult": [0, 0, 0, 0, 3.65]
+                }
+            }
+        ]
+    },
+    {
+        "name": "Focused Shot",
+        "skillCoeff": 0,
+        "direction": 1,
+        "cooldown": 27,
+        "frames": 181.8,
+        "tripods": [
+            {
+                "name": "Quick Aim",
+                "min_skill_lvl": 4, 
+                "stat_dict": {
+                    "Atkspeed": 0.1
+                }
+            },
+            {
+                "name": "Double Tap",
+                "min_skill_lvl": 7,
+                "stat_dict": {
+                    "Mult": [0, 0, 0, 0, 1.64]
+                }
+                
+            },
+            {
+                "name": "Final Strike",
+                "min_skill_lvl": 10,
+                "stat_dict": {
+                    "Mult": [0, 0, 0, 0, 2.8]
+                }
+            },
+            {
+                "name": "Quickshot",
+                "min_skill_lvl": 10,
+                "stat_dict": {
+                    "Mult": [0, 0, 0, 0, 3.65]
+                }
+            }
+        ]
+    }
+]
