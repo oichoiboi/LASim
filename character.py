@@ -1,15 +1,16 @@
 import json
 from stats import *
 from skills import Tripod, Skill
+from enum import *
 
-class Job(Stats):
+class Character(Stats):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.skills = []
         self.maxGauge = 0
         self.lvlcoefficient = {key: 0 for key in range(13)}
         
-class Gunslinger(Job):
+class Gunslinger(Character):
     pass
 
 
@@ -19,8 +20,5 @@ with open('test.json', 'r') as json_file:
 
 skills = [Skill(**skill) for skill in gs_skills]
 for skill in skills:
-    for tripod in skill.tripods:
-        print(tripod.stat_dict)
-        tripod.change_level(5)
-        print(tripod.Atkspeed)
+    print(skill.name, skill.position, skill.activation)
         

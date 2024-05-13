@@ -2,9 +2,10 @@
     {
         "name": "Focused Shot",
         "skillCoeff": 0,
-        "direction": 1,
-        "cooldown": 27,
-        "frames": 181.8,
+        "position": 1,
+        "activation": 1,
+        "basecooldown": 27,
+        "baseframes": 181.8,
         "tripods": [
             {
                 "name": "Quick Aim",
@@ -44,9 +45,10 @@
     {
         "name": "Focused Shot",
         "skillCoeff": 0,
-        "direction": 1,
-        "cooldown": 27,
-        "frames": 181.8,
+        "position": 1,
+        "activation": 1,
+        "basecooldown": 27,
+        "baseframes": 181.8,
         "tripods": [
             {
                 "name": "Quick Aim",
