@@ -2,54 +2,45 @@ from dataclasses import dataclass, field
 from typing import List
 from stats import Stats
 from enums import GearTier, GearType
+from abc import ABC, abstractmethod
 
-@dataclass
 class Gear:
-    type: GearType = None
-    trans_lvl: int = 0
-    trans_grade: int = 0
-    honing_lvl: int = 0
-    tier: GearTier = GearTier.AKKAN
+    def __init__(self, type, transcLvl, transcGrade, honeLvl, tier):
+        self.type = type
+        self.tier = tier
+        self.transcLvl = transcLvl
+        self.transcGrade = transcGrade
+        self.honeLvl = honeLvl
     
-    def get_gear_value(self, data):
-        tier_data = data.get(self.tier, [])
-        item = next(
-            (item for item in tier_data if item["Level"] == self.honing and self.type in item), None)
-        stat = 0 if item is None else item[self.type]
-        return stat
-    
-    def set_t_lvl(self, level: int):
-        self.trans_lvl = level
-    
-    def set_t_grade(self, grade: int):
-        self.trans_grade = grade
+    def set_transcLvl(self, level: int):
+        self.transcLvl = level
+        self.get_transcLvlBonus
         
-    def set_honing_level(self, level: int):
-        self.honing_lvl = level
-        
+    def set_honeLvl(self, level: int):
+        self.honeLvl = level
+        self.get_gearStat()
+
     def set_tier(self, tier: GearTier):
         if tier in GearTier:
-            self.tier = tier
+            self.tier = tier.value
         else:
             raise TypeError
-    
+        self.get_gearStat()
+        
+    def set_transcGrade(self, grade: int):
+        self.transcGrade = grade
 
-    
-@dataclass
-class GearManager(Stats):
-    gear: List[Gear] = None
-    
-    def get_honing_stats(self):
-        pass
-    
-    def get_trans_stats(self):
-        pass
-    
-    def trans_level_stats(self, gear):
-        pass
-    
-    def trans_grade_stats(self, gear):
-        pass
-    
-    def weapon_quality(self):
-        pass
+
+class GearMgr:
+
+    def get_gearStat(self, data):
+        tier_data = data.get(self.tier.value, [])
+        item = next(
+            (
+                item
+                for item in tier_data
+                if item["Level"] == self.honeLvl and self.type.value in item
+            ),
+            None,
+        )
+        self.honeStat = 0 if item is None else item[self.type]

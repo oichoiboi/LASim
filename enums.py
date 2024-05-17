@@ -27,8 +27,6 @@ class Rarity(enum.Enum):
     EPIC = 3
     LEGENDARY = 4
 
-    
-
 class Rune(enum.Enum):
     GALEWIND = 1
     OVERWHELM = 2
@@ -53,3 +51,5 @@ class GearTier(str, enum.Enum):
     BREL = "Brelshaza"
     AKKAN = "Akkan"
 
+tier = GearTier.AKKAN
+print(tier.value)
