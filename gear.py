@@ -4,42 +4,52 @@ from stats import Stats
 from enums import GearTier, GearType
 from abc import ABC, abstractmethod
 
+#double check how Echidna honing affects Akkan gear
+MAX_HONING_LEVEL: {
+    GearType.RELIC: 20,
+    GearType.BREL: 25,
+    GearType.AKKAN: 25
+}
+
 class Gear:
     def __init__(self, type, transcLvl, transcGrade, honeLvl, tier):
         self.type = type
         self.tier = tier
+        self.set_transcLvl(transcLvl)
         self.transcLvl = transcLvl
         self.transcGrade = transcGrade
         self.honeLvl = honeLvl
     
     def set_transcLvl(self, level: int):
-        if self.tier != GearType.Akkan:
-            pass
-        else:
+        if self.tier == GearType.AKKAN:
             self.transcLvl = level
+        else:
+            self.transcLvl = 0
         
     def set_honeLvl(self, level: int):
-        if self.tier == GearTier.RELIC and level <=20:
+        if level <= MAX_HONING_LEVEL.get(self.tier):
             self.honeLvl = level
-        elif (self.tier == GearTier.BREL or self.tier == GearTier.AKKAN) and level <= 25:
-            self.honeLvl = level
-
-
+        else:
+            self.honeLvl = 0
 
     def set_tier(self, tier: GearTier):
-        if tier in GearTier:
-            self.tier = tier.value
-        else:
-            raise TypeError
-        self.get_gearStat()
-        
+        self.tier = tier
+
     def set_transcGrade(self, grade: int):
-        self.transcGrade = grade
+        if self.tier == GearTier.AKKAN:
+            self.transcGrade = grade
+        else:
+            self.transcGrade = 0
 
 
 class GearMgr:
     def __init__(self):
         self._helmet = Gear(GearType.HELMET, 0, 0, 0, GearTier.AKKAN)
+        self._shoulders = Gear(GearType.SHOULDER, 0, 0, 0, GearTier.AKKAN)
+        self._chest = Gear(GearType.CHEST, 0, 0, 0, GearTier.AKKAN)
+        self._pants = Gear(GearType.PANTS, 0, 0, 0, GearTier.AKKAN)
+        self._gloves = Gear(GearType.GLOVES, 0, 0, 0, GearTier.AKKAN)
+        self._weapon = Gear(GearType.WEAPON, 0, 0, 0, GearTier.AKKAN)
 
     def get_gearStat(self, data):
         tier_data = data.get(self.tier.value, [])

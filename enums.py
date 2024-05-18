@@ -5,13 +5,7 @@ class Position(enum.Enum):
     FRONTATTACK = 2
     BACKATTACK = 3
     FRONTBACK = 4
-    
-    @classmethod
-    def from_json(cls, value):
-        if isinstance(value, int):
-            return cls(value)
-        elif isinstance(value, str):
-            return cls[value]
+
     
 class Activation(enum.Enum):
     NORMAL = 1
@@ -44,12 +38,13 @@ class GearType(enum.Enum):
     SHOULDER = "Shoulder"
     CHEST = "Chest"
     PANTS = "Pants"
+    GLOVES = "Gloves"
     WEAPON = "Weapon"
     
-class GearTier(str, enum.Enum):
+class GearTier(enum.Enum):
     RELIC = "Relic"
     BREL = "Brelshaza"
     AKKAN = "Akkan"
 
-tier = GearTier.AKKAN
-print(tier.value)
+gem = GearTier("Akkan")
+print(gem.name)
