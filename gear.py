@@ -13,12 +13,18 @@ class Gear:
         self.honeLvl = honeLvl
     
     def set_transcLvl(self, level: int):
-        self.transcLvl = level
-        self.get_transcLvlBonus
+        if self.tier != GearType.Akkan:
+            pass
+        else:
+            self.transcLvl = level
         
     def set_honeLvl(self, level: int):
-        self.honeLvl = level
-        self.get_gearStat()
+        if self.tier == GearTier.RELIC and level <=20:
+            self.honeLvl = level
+        elif (self.tier == GearTier.BREL or self.tier == GearTier.AKKAN) and level <= 25:
+            self.honeLvl = level
+
+
 
     def set_tier(self, tier: GearTier):
         if tier in GearTier:
@@ -32,6 +38,8 @@ class Gear:
 
 
 class GearMgr:
+    def __init__(self):
+        self._helmet = Gear(GearType.HELMET, 0, 0, 0, GearTier.AKKAN)
 
     def get_gearStat(self, data):
         tier_data = data.get(self.tier.value, [])
