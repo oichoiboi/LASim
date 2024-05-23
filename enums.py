@@ -34,17 +34,17 @@ class GemType(enum.Enum):
     COOLDOWN = 2
     
 class GearType(enum.Enum):
-    HELMET = "Helmet"
-    SHOULDER = "Shoulder"
-    CHEST = "Chest"
-    PANTS = "Pants"
-    GLOVES = "Gloves"
-    WEAPON = "Weapon"
+    Helmet = "Helmet"
+    Shoulder = "Shoulder"
+    Chest = "Chest"
+    Pants = "Pants"
+    Gloves = "Gloves"
+    Weapon = "Weapon"
     
 class GearTier(enum.Enum):
-    RELIC = "Relic"
-    BREL = "Brelshaza"
-    AKKAN = "Akkan"
+    Relic = "Relic"
+    Brel = "Brelshaza"
+    Akkan = "Akkan"
 
 gem = GearTier("Akkan")
 print(gem.name)
