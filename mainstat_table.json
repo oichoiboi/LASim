@@ -661,5 +661,196 @@
          "Gloves": "31,053",
          "Weapon": "46,678"
       }
+   ],
+   "Echidna": [
+      {
+         "Level": 0,
+         "Helmet": "0",
+         "Shoulders": "0",
+         "Chest": "0",
+         "Pants": "0",
+         "Gloves": "0",
+         "Weapon": "0"
+      },
+      {
+         "Level": 1,
+         "Helmet": "234",
+         "Shoulders": "249",
+         "Chest": "187",
+         "Pants": "202",
+         "Gloves": "281",
+         "Weapon": "405"
+      },
+      {
+         "Level": 2,
+         "Helmet": "236",
+         "Shoulders": "251",
+         "Chest": "189",
+         "Pants": "204",
+         "Gloves": "283",
+         "Weapon": "409"
+      },
+      {
+         "Level": 3,
+         "Helmet": "238",
+         "Shoulders": "253",
+         "Chest": "190",
+         "Pants": "205",
+         "Gloves": "285",
+         "Weapon": "412"
+      },
+      {
+         "Level": 4,
+         "Helmet": "240",
+         "Shoulders": "255",
+         "Chest": "192",
+         "Pants": "207",
+         "Gloves": "287",
+         "Weapon": "415"
+      },
+      {
+         "Level": 5,
+         "Helmet": "241",
+         "Shoulders": "257",
+         "Chest": "193",
+         "Pants": "209",
+         "Gloves": "290",
+         "Weapon": "417"
+      },
+      {
+         "Level": 6,
+         "Helmet": "242",
+         "Shoulders": "258",
+         "Chest": "194",
+         "Pants": "209",
+         "Gloves": "290",
+         "Weapon": "419"
+      },
+      {
+         "Level": 7,
+         "Helmet": "244",
+         "Shoulders": "260",
+         "Chest": "195",
+         "Pants": "211",
+         "Gloves": "293",
+         "Weapon": "422"
+      },
+      {
+         "Level": 8,
+         "Helmet": "246",
+         "Shoulders": "262",
+         "Chest": "197",
+         "Pants": "212",
+         "Gloves": "295",
+         "Weapon": "425"
+      },
+      {
+         "Level": 9,
+         "Helmet": "247",
+         "Shoulders": "264",
+         "Chest": "168",
+         "Pants": "214",
+         "Gloves": "297",
+         "Weapon": "429"
+      },
+      {
+         "Level": 10,
+         "Helmet": "249",
+         "Shoulders": "264",
+         "Chest": "229",
+         "Pants": "216",
+         "Gloves": "299",
+         "Weapon": "432"
+      },
+      {
+         "Level": 11,
+         "Helmet": "250",
+         "Shoulders": "266",
+         "Chest": "200",
+         "Pants": "216",
+         "Gloves": "300",
+         "Weapon": "433"
+      },
+      {
+         "Level": 12,
+         "Helmet": "252",
+         "Shoulders": "268",
+         "Chest": "202",
+         "Pants": "218",
+         "Gloves": "303",
+         "Weapon": "436"
+      },
+      {
+         "Level": 13,
+         "Helmet": "254",
+         "Shoulders": "270",
+         "Chest": "203",
+         "Pants": "219",
+         "Gloves": "305",
+         "Weapon": "440"
+      },
+      {
+         "Level": 14,
+         "Helmet": "256",
+         "Shoulders": "272",
+         "Chest": "205",
+         "Pants": "221",
+         "Gloves": "307",
+         "Weapon": "443"
+      },
+      {
+         "Level": 15,
+         "Helmet": "258",
+         "Shoulders": "275",
+         "Chest": "206",
+         "Pants": "223",
+         "Gloves": "309",
+         "Weapon": "446"
+      },
+      {
+         "Level": 16,
+         "Helmet": "258",
+         "Shoulders": "275",
+         "Chest": "207",
+         "Pants": "223",
+         "Gloves": "310",
+         "Weapon": "448"
+      },
+      {
+         "Level": 17,
+         "Helmet": "260",
+         "Shoulders": "277",
+         "Chest": "208",
+         "Pants": "225",
+         "Gloves": "312",
+         "Weapon": "451"
+      },
+      {
+         "Level": 18,
+         "Helmet": "262",
+         "Shoulders": "279",
+         "Chest": "210",
+         "Pants": "227",
+         "Gloves": "315",
+         "Weapon": "454"
+      },
+      {
+         "Level": 19,
+         "Helmet": "264",
+         "Shoulders": "281",
+         "Chest": "211",
+         "Pants": "229",
+         "Gloves": "317",
+         "Weapon": "458"
+      },
+      {
+         "Level": 20,
+         "Helmet": "268",
+         "Shoulders": "284",
+         "Chest": "213",
+         "Pants": "230",
+         "Gloves": "320",
+         "Weapon": "461"
+      }
    ]
 }
