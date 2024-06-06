@@ -3,32 +3,38 @@ from typing import List
 from enum import Enum
 
 class BuffType(Enum):
-    Cycle
+    Constant = 1 # not sure if I want to add this
+    Temp = 2
+    Cycle = 3
 
+@dataclass
 class Buff:
-    def __init__(self, name, modifiers, values, cooldown):
-        self.name = name
-        self.modifiers = modifiers  # buffs can modify various values, or are constant.
-        self.values = values  # some buffs have values that ramp up, or are constant.
-        self.cycles = list()
-        self.cooldown = cooldown  # If a buff is perm, cooldown = 0. Otherwise, it has internal cooldown = x.
-        self.lastUse = 0
-        self.step = 0
-        self.average = 0
-        self.max = 0
+    name: str = "None"
+    modifiers: List[str] | str = "None"
+    buffType: BuffType = BuffType.Constant
+    values: List[float] | float = 0
+    cycles: List[float] | float = 0
+    cooldown: float = 0
+    lastUse: float = 0
+    average: float = 0
+    max: float = 0
 
-    def available(self, time):
+    def __post_init__(self):
+        if self.buffType is BuffType.Temp:
+    def available(self, current_time):
         """
         Should work regardless if it's a permanent buff or not
         """
-        if time > (self.lastUse + self.cooldown):
+        if self.buffType is BuffType.Constant or self.buffType is BuffType.Cycle:
+            return True
+        elif self.buffType is BuffType.Temp and current_time > (self.lastUse + self.cooldown):
             return True
         return False
 
-    def modifier(self, time):
+    def modifier(self, current_time):
         pass
 
-    def get_cyclic_value(self, time):
+    def get_cyclic_value(self, current_time):
         total_cycle_time = sum(duration for _, duration in self.cycles)
         current_time = time % total_cycle_time
 
