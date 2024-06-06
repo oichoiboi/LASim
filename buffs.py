@@ -2,10 +2,12 @@ from dataclasses import dataclass, field
 from typing import List
 from enum import Enum
 
+
 class BuffType(Enum):
-    Constant = 1 # not sure if I want to add this
+    Constant = 1  # not sure if I want to add this
     Temp = 2
     Cycle = 3
+
 
 @dataclass
 class Buff:
@@ -20,15 +22,23 @@ class Buff:
     max: float = 0
 
     def __post_init__(self):
-        if self.buffType is BuffType.Temp:
+        pass  # may need this later, maybe not
+
     def available(self, current_time):
         """
         Should work regardless if it's a permanent buff or not
         """
-        if self.buffType is BuffType.Constant or self.buffType is BuffType.Cycle:
-            return True
-        elif self.buffType is BuffType.Temp and current_time > (self.lastUse + self.cooldown):
-            return True
+        match self.buffType:
+            case BuffType.Constant:
+                return True
+            case BuffType.Cycle:
+                """
+                For now I haven't found a buff that cycles and has a cooldown
+                """
+                return True
+            case BuffType.Temp:
+                if current_time > (self.lastUse + self.cooldown):
+                    return True
         return False
 
     def modifier(self, current_time):
@@ -36,12 +46,12 @@ class Buff:
 
     def get_cyclic_value(self, current_time):
         total_cycle_time = sum(duration for _, duration in self.cycles)
-        current_time = time % total_cycle_time
+        match_cycle = current_time % total_cycle_time
 
         for value, duration in self.cycles:
-            if current_time < duration:
+            if match_cycle < duration:
                 return value
-            current_time -= duration
+            match_cycle -= duration
 
         # If time exceeds the total cycle time, return the first value
         return self.cycles[0][0]
