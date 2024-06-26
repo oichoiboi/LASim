@@ -45,6 +45,6 @@ class GearTier(enum.Enum):
     Relic = "Relic"
     Brel = "Brelshaza"
     Akkan = "Akkan"
+    T4Relic = "T4Relic"
+    T4Ancient = "T4Ancient"
 
-gem = GearTier("Akkan")
-print(gem.name)
