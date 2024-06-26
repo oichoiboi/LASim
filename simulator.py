@@ -5,7 +5,8 @@ from stats import *
 with open('mainstat_table.json', 'r') as json_file:
     gear_stats = json.load(json_file)
 pieces = ["Helmet", "Shoulders", "Chest", "Pants", "Gloves", "Weapon"]
-class Simulator():
+
+class Simulator:
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.gear = []

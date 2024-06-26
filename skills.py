@@ -3,12 +3,13 @@ from enums import Activation, Position, Rune, GearType, Rarity
 from dataclasses import dataclass, field
 from typing import Dict, List, Union
 
-#RUNE CONSTANTS
+
+# RUNE CONSTANTS
+
 GALEWIND = {Rarity.COMMON: 0.8, Rarity.RARE: 0.10, Rarity.EPIC: 0.12, Rarity.LEGENDARY: 0.14}
 OVERWHELM = {Rarity.COMMON: 7, Rarity.RARE: 9, Rarity.EPIC: 12, Rarity.LEGENDARY: 15}
     
 #GEM CONSTANTS
-
 
 @dataclass
 class Tripod(Stats):
@@ -36,7 +37,7 @@ class Tripod(Stats):
         
 
 @dataclass
-class Skill():
+class Skill:
     '''
     Represents a skill. Has original skill information and tripod information.
     
