@@ -1,9 +1,7 @@
-from dataclasses import dataclass, field
-from typing import List, Dict
+from dataclasses import dataclass
 from enums import GearTier, GearType
 import json
 
-#double check how Echidna honing affects Akkan gear
 TIER_DATA = {
     GearTier.Relic: {
         'Base': 1250,
@@ -38,6 +36,7 @@ with open('mainstat_table.json', 'r') as json_file:
     gear_stats = json.load(json_file)
 
 # with an assumption that GearMgr will handle all error logic, ie setting elixir or transc without proper item level
+
 @dataclass
 class Gear:
     piece: GearType
@@ -121,14 +120,3 @@ class GearMgr:
             self.gear[piece].advHoneLvl = min(level, 20)
         elif self.itemLvl > 1620:
             self.gear[piece].advHoneLvl = min(level, 10)
-
-
-
-test = GearMgr()
-for gear in test.gear:
-    print(gear.piece)
-
-
-
-
-
