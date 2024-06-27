@@ -21,6 +21,7 @@ class Rarity(enum.Enum):
     EPIC = 3
     LEGENDARY = 4
 
+
 class Rune(enum.Enum):
     GALEWIND = 1
     OVERWHELM = 2
@@ -29,10 +30,12 @@ class Rune(enum.Enum):
     QUICK = 5
     BLEED = 6
 
+
 class GemType(enum.Enum):
     DAMAGE = 1
     COOLDOWN = 2
-    
+
+
 class GearType(enum.Enum):
     Helmet = "Helmet"
     Shoulder = "Shoulder"
@@ -40,7 +43,8 @@ class GearType(enum.Enum):
     Pants = "Pants"
     Gloves = "Gloves"
     Weapon = "Weapon"
-    
+
+
 class GearTier(enum.Enum):
     Relic = "Relic"
     Brel = "Brelshaza"

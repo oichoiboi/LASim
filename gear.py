@@ -32,6 +32,8 @@ TIER_DATA = {
     }
 }
 
+armour_pieces = [GearType.Helmet, GearType.Shoulder, GearType.Chest, GearType.Pants, GearType.Gloves]
+
 with open('mainstat_table.json', 'r') as json_file:
     gear_stats = json.load(json_file)
 
@@ -44,8 +46,8 @@ class Gear:
     advHoneLvl: int = 0
 
     @staticmethod
-    def get_stat(tier, level, piece):
-        tier_data = gear_stats.get(tier, []) # return the nested dictionary in the selected tier, otherwise return empty list
+    def get_stat(tier: str, level: int, piece: str):
+        tier_data = gear_stats.get(tier, [])  # return the nested dict in the selected tier, otherwise return empty list
         item = next(
             (
                 item
@@ -55,9 +57,21 @@ class Gear:
             None,
         )
         return 0 if item is None else item[piece]
+
     @property
-    def honeStat(self):
-        return self.get_stat(self.tier.value, self.honeLvl, self.piece.value)
+    def mainStat(self):
+        if self.piece is not GearType.Weapon:
+            return self.get_stat(self.tier.value, self.honeLvl, self.piece.value)
+        else:
+            return 0
+
+    @property
+    def weaponPower(self):
+        if self.piece is GearType.Weapon:
+            return self.get_stat(self.tier.value, self.honeLvl, self.piece.value)
+        else:
+            return 0
+
     @property
     def advhoneStat(self):
         return self.get_stat("Echidna", self.advHoneLvl, self.piece.value)
@@ -65,19 +79,17 @@ class Gear:
     @property
     def itemLvl(self):
         tier = TIER_DATA[self.tier]
-        base, per = tier['Base'], tier['Per'] # user shouldn't be able to select honeLvl higher than max in GUI
+        base, per = tier['Base'], tier['Per']  # user shouldn't be able to select honeLvl higher than max in GUI
         return base + self.honeLvl * per
 
 
 class GearMgr:
     def __init__(self):
-        self.gear = {}
-        for piece in GearType:
-            self.gear[piece] = (Gear(piece, GearTier.Akkan, 0, 0))
+        self.gear = {piece: Gear(piece, GearTier.Akkan, 0, 0) for piece in GearType}
 
     @property
     def baseitemLvl(self):
-        return sum(piece.itemLvl for piece in self.gear.values())/6
+        return sum(piece.itemLvl for piece in self.gear.values())
 
     @property
     def advHoneLvl(self):
@@ -86,36 +98,29 @@ class GearMgr:
     @property
     def itemLvl(self):
         if self.baseitemLvl >= 1620:
-            return self.baseitemLvl + self.advHoneLvl
-        return self.baseitemLvl
-
-    def get_gearStat(self):
-        pass
-        # return flatAP, stat, wpnpower
+            return (self.baseitemLvl + self.advHoneLvl) / 6
+        return self.baseitemLvl / 6
 
     @property
     def mainstat(self):
-        pass
+        return sum(piece.mainStat for piece in self.gear.values())
 
     @property
     def wpnPower(self):
-        pass
+        return sum(piece.weaponPower for piece in self.gear.values())
 
     def set_honeLvl(self, piece: GearType, level: int):
-        if TIER_DATA[self.gear[piece].tier]['Max'] <= level:
-            self.gear[piece].honeLvl = level
+        self.gear[piece].honeLvl = min(TIER_DATA[self.gear[piece].tier]['Max'], level)
 
     def set_tier(self, piece: GearType, tier: GearTier):
         self.gear[piece].tier = tier
-        if TIER_DATA[self.gear[piece].tier]['Max'] <= self.gear[piece].honeLvl:
-            self.gear[piece].honeLvl = TIER_DATA[self.gear[piece].tier]['Max']
+        self.set_honeLvl(piece, self.gear[piece].honeLvl)
 
     def set_advitemLvl(self, piece: GearType, level: int):
-        if TIER_DATA[self.gear[piece].tier]['Max'] <= level:
-            self.gear[piece].advHoneLvl = level
-
-
-
+        if self.itemLvl > 1630:
+            self.gear[piece].advHoneLvl = min(level, 20)
+        elif self.itemLvl > 1620:
+            self.gear[piece].advHoneLvl = min(level, 10)
 
 
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Dict
 from stats import Stats
 from enums import GearTier, GearType
 from abc import ABC, abstractmethod
@@ -22,39 +22,18 @@ TRANSC_LVL_ARMOUR_BONUS = {1: 600,
                            6: 1000,
                            7: 1080}
 
-with open('mainstat_table.json', 'r') as json_file:
-    gear_stats = json.load(json_file)
-
-
 # with an assumption that GearMgr will handle all error logic, ie setting elixir or transc without proper item level
 @dataclass
-class Gear(ABC):
-    piece: GearType
-    tier: GearTier = GearTier.Akkan
-    honeLvl: int = 0
-    transcLvl: int = 0
-    transcGrade: int = 0
-    advHoneLvl = 0
+class Transcendence:
+    levels: Dict[GearType, int]
+    totalGrade: int = field(default=0)
 
-    @property
-    def honeStat(self):
-        tier_data = gear_stats.get(self.tier.value, [])
-        item = next(
-            (
-                item
-                for item in tier_data
-                if item["Level"] == self.honeLvl and self.piece.value in item
-            ),
-            None,
-        )
-        return 0 if item is None else item[self.piece.value]
-
-    def transcLvlBonus(self, transcSys: bool):
-        if transcSys:
-            if self.piece is GearType.Weapon:
+    def levelMainStat(self):
+        return sum(TRANSC_LVL_ARMOUR_BONUS[])
+        if leve GearType.Weapon:
                 return TRANSC_LVL_WPN_BONUS.get(self.transcLvl, 0)
-            else:
-                return TRANSC_LVL_ARMOUR_BONUS.get(self.transcLvl, 0)
+        else:
+            return TRANSC_LVL_ARMOUR_BONUS.get(self.transcLvl, 0)
         return 0
 
     def advHoneStat(self, advSys: bool):
