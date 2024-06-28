@@ -41,6 +41,8 @@ class Stats(Enum):
     # Conditionals
     ChargeDmg = auto()
     CastDmg = auto()
+    # Other
+
 
 
 
