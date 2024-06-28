@@ -42,6 +42,10 @@ class Stats(Enum):
     ChargeDmg = auto()
     CastDmg = auto()
     # Other
+    Stagger = auto()
+    IdentityGain = auto()
+    APBuff = auto()
+    HealShield = auto()
 
 
 

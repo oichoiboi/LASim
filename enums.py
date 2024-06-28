@@ -1,5 +1,6 @@
 import enum
 
+
 class Position(enum.Enum):
     NONPOSITIONAL = 1
     FRONTATTACK = 2
@@ -43,6 +44,7 @@ class GearType(enum.Enum):
     Pants = "Pants"
     Gloves = "Gloves"
     Weapon = "Weapon"
+    Common = "Common"
 
 
 class GearTier(enum.Enum):
