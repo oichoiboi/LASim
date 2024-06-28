@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Dict
+from typing import List, Dict, Union
 from stats import Stats
 from enums import GearTier, GearType
 from abc import ABC, abstractmethod
@@ -24,93 +24,87 @@ LVL_ARMOUR_BONUS = {1: 600,
 
 
 @dataclass
-class GearTransc:
-    name: GearType
-    level: int = field(default=0)
-    grade: int = field(default=0)
-
-@dataclass
 class TranscendenceMgr:
-    gear: List[GearTransc] = field(init=False)
+    levels: Dict[GearType, int] = field(init=False)
+    grade: Dict[GearType, int] = field(init=False)
 
     def __post_init__(self):
-        self.gear = [GearTransc(piece, 0, 0) for piece in GearType]
+        self.levels = {piece: 0 for piece in GearType}
+        self.grade = {piece: 0 for piece in GearType}
+
+    def set_level(self, piece, lvl):
+        self.levels[piece] = min(7, lvl)
+
+    def set_grade(self, piece, grade):
+        self.levels[piece] = min(self.levels[piece]*3, grade)
 
     def levelMainStat(self):
-        return sum(LVL_ARMOUR_BONUS[piece.level] for piece in self.gear if piece.name is not GearType.Weapon)
+        return sum(LVL_ARMOUR_BONUS[level] for piece, level in self.levels.values() if piece is not GearType.Weapon)
 
     def levelWpnPwr(self):
-        return sum(LVL_WPN_BONUS[piece.level] for piece in self.gear if piece.name is GearType.Weapon)
+        return sum(LVL_WPN_BONUS[level] for piece, level in self.levels.values() if piece is GearType.Weapon)
 
     @property
     def totalGrade(self):
-        return sum(piece.grade for piece in self.gear)
+        return sum(self.grade.values())
 
+    def stats_flat(self, piece: GearType, grades: List[int], values: List[float]):
+        if len(grades) != len(values):
+            return 0
+        return sum(values[i] for i in range(len(grades)) if self.grade[piece] >= grades[i])
+
+    def stats_scale(self, piece: GearType, grades: Union[int, List[int]], value: float):
+        if isinstance(grades, int):
+            return value * self.totalGrade if self.grade[piece] >= grades else 0
+        elif isinstance(grades, list):
+            return sum(value * self.totalGrade for i in range(len(grades)) if self.grade[piece] >= grades[i])
+
+    @property
     def mainStat(self):
-        stat = 0
-        for piece in self.gear:
-            match piece.name:
-                case GearType.Helmet:
-                    stat += (55 * self.totalGrade if piece.grade >= 10 else 0)
-                case GearType.Gloves:
-                    if piece.grade >= 5:
-                        stat += 4200
-                    if piece.grade >= 15:
-                        stat += 4200
-                    if piece.grade >= 20:
-                        stat += 4200
-        return stat
+        helmet = self.stats_scale(GearType.Helmet, 10, 55)
+        gloves = self.stats_flat(GearType.Gloves, [5, 15, 20], [4200, 4200, 4200])
+        levels = self.levelMainStat()
+        return helmet + gloves + levels
 
+    @property
     def wpnPower(self):
-        stat = 0
-        for piece in self.gear:
-            match piece.name:
-                case GearType.Helmet:
-                    stat += (14 * self.totalGrade if piece.grade >= 15 else 0)
-                case GearType.Shoulder:
-                    if piece.grade >= 5:
-                        stat += 1200
-                    if piece.grade >= 15:
-                        stat += 1200
-                    if piece.grade >= 20:
-                        stat += 1200
-                case GearType.Chest:
-                    if piece.grade >= 20:
-                        stat += 3200
-                    if piece.grade >= 15:
-                        stat += 2000
-                    if piece.grade >= 5:
-                        stat += 2000
-        return stat
+        helmet = self.stats_scale(GearType.Helmet, 15, 14)
+        shoulder = self.stats_flat(GearType.Shoulder, [5, 15, 20], [1200, 1200, 1200])
+        chest = self.stats_flat(GearType.Chest, [5, 15, 20], [2000, 2000, 3200])
+        levels = self.levelWpnPwr()
+        return helmet + shoulder + chest + levels
 
+    @property
     def flatAP(self):
-        stat = 0
-        for piece in self.gear:
-            match piece.name:
-                case GearType.Helmet:
-                    stat += (6 * self.totalGrade if piece.grade >= 20 else 0)
-                case GearType.Weapon:
-                    if piece.grade >= 5:
-                        stat += 800
-                    if piece.grade >= 10:
-                        stat += 800
-                    if piece.grade >= 15:
-                        stat += 800
-                    if piece.grade >= 20:
-                        stat += 1125
-        return stat
+        helmet = self.stats_scale(GearType.Helmet, 20, 6)
+        weapon = self.stats_flat(GearType.Weapon, [5, 10, 15, 20], [800, 800, 800, 1125])
+        return helmet + weapon
+
+    @property
+    def buff_AP(self):
+        helmet = self.stats_scale(GearType.Helmet, [5, 10, 15, 20], 0.0001)
+        shoulder = self.stats_scale(GearType.Shoulder, [5, 15, 20], 0.01)
+        gloves = self.stats_scale(GearType.Gloves, [5, 15, 20], 0.01)
+        pants = self.stats_flat(GearType.Pants, [10, 15, 20], [0.015, 0.015, 0.03])
+        return helmet + shoulder + gloves + pants
 
     @property
     def intimidation(self):
-        if self.gear[4].grade >= 20:
+        # 1.5% damage to enemies
+        if self.grade[GearType.Pants] >= 20:
             return True
-        else:
-            return False
+        return False
 
     @property
     def successor(self):
-        if self.gear[4].grade >= 15:
-            return 2
-        elif self.gear[4].grade >= 10:
-            return 1
+        if self.grade[GearType.Pants] >= 15:
+            return 1.4e7
+        elif self.grade[GearType.Pants] >= 10:
+            return 7e7
+        return 0
+
+    @property
+    def brand_power(self):
+        return self.stats_flat(GearType.Weapon, [5, 10, 15, 20], [0.02, 0.02, 0.02, 0.04])
+
 
