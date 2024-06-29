@@ -44,7 +44,6 @@ class GearType(enum.Enum):
     Pants = "Pants"
     Gloves = "Gloves"
     Weapon = "Weapon"
-    Common = "Common"
 
 
 class GearTier(enum.Enum):
