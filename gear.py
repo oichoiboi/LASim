@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from enums import GearTier, GearType
 import json
 
+
 TIER_DATA = {
     GearTier.Relic: {
         'Base': 1250,
@@ -32,10 +33,11 @@ TIER_DATA = {
 
 armour_pieces = [GearType.Helmet, GearType.Shoulder, GearType.Chest, GearType.Pants, GearType.Gloves]
 
-with open('mainstat_table.json', 'r') as json_file:
+with open('data/mainstat_table.json', 'r') as json_file:
     gear_stats = json.load(json_file)
 
 # with an assumption that GearMgr will handle all error logic, ie setting elixir or transc without proper item level
+
 
 @dataclass
 class Gear:

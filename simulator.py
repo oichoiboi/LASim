@@ -2,7 +2,7 @@
 import json
 from stats import *
 
-with open('mainstat_table.json', 'r') as json_file:
+with open('data/mainstat_table.json', 'r') as json_file:
     gear_stats = json.load(json_file)
 pieces = ["Helmet", "Shoulders", "Chest", "Pants", "Gloves", "Weapon"]
 
