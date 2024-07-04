@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 from elixir import (ElixirType, COMMON_ELX, HELMET_ELX, SHOULDER_ELX,
                     CHEST_ELX, PANTS_ELX, GLOVES_ELX, SET_ELX, ELX_OPTIONS)
 import enum
+from functools import reduce
 
 
 @dataclass
@@ -84,14 +85,17 @@ class ElixirMgr:
         else:
             return 0
 
-    def get_total_mod(self, mod):
+    def get_total_mod(self, mod, mode):
         set_level = self.elixir_set_effect_level
-        values = [
+        results = [
             value
             for piece in self.elixirs.values()
             for value in piece.get_elx_value(mod)
             if value != 0
         ]
         if set_level > 0:
-            values.append(self.set_elixir[2].get(mod, 0)[set_level])
-        return values
+            results.append(self.set_elixir[2].get(mod, 0)[set_level])
+        if mode == 0:
+            return sum(results)
+        elif mode == 0:
+            return reduce(lambda x, y: x * (y + 1), results, 1)
